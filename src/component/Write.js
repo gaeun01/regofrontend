@@ -46,7 +46,7 @@ function Write() {
       const imgValue = Array.isArray(form.img)
           ? form.img[0]?.name || ''
           : form.img;
-        await axios.post('http://localhost:9070/write', {
+        await axios.post('https://port-0-regobackend-mbhas4h3dc26f757.sel4.cloudtype.app/write', {
           ...form,
           img: imgValue, userid
         });
