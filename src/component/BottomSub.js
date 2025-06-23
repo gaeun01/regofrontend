@@ -84,7 +84,7 @@ const BottomSub=({setCartCount}) => {
     if(res.ok){
       setIsModalOpen(true);
       try{
-      const updatedRes = await fetch(`http://localhost:9070/cart?userId=${userId}`);
+      const updatedRes = await fetch(`https://port-0-regobackend-mbhas4h3dc26f757.sel4.cloudtype.app/cart?userId=${userId}`);
       const updatedCart = await updatedRes.json();
       setCartCount(updatedCart.length);
       window.dispatchEvent(new Event('cartChanged'));
