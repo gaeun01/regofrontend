@@ -73,7 +73,7 @@ const BottomSub=({setCartCount}) => {
       return
     }
     try{
-      const res = await fetch('http://localhost:9070/cart', {
+      const res = await fetch('https://port-0-regobackend-mbhas4h3dc26f757.sel4.cloudtype.app/cart', {
         method:'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
@@ -107,7 +107,7 @@ const BottomSub=({setCartCount}) => {
     return;
     }
     try {
-      const res = await fetch('http://localhost:9070/cart', {
+      const res = await fetch('https://port-0-regobackend-mbhas4h3dc26f757.sel4.cloudtype.app/cart', {
         method : 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
