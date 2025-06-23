@@ -18,7 +18,7 @@ useEffect(() => {
   
 
   
-  fetch(`http://localhost:9070/cart?userId=${userId}`)
+  fetch(`https://port-0-regobackend-mbhas4h3dc26f757.sel4.cloudtype.app/cart?userId=${userId}`)
     .then(res => res.json())
     .then(data => {
       setCartItems(data);
@@ -33,7 +33,7 @@ useEffect(() => {
     const item = cartItems[idx];
     if (!item) return;
 
-    fetch(`http://localhost:9070/cart/${item.no}`, {method: 'DELETE'})
+    fetch(`https://port-0-regobackend-mbhas4h3dc26f757.sel4.cloudtype.app/cart/${item.no}`, {method: 'DELETE'})
     .then(()=> {
       const updated = cartItems.filter((_, i) => i !==idx);
       setCartItems(updated);
@@ -52,7 +52,7 @@ useEffect(() => {
 
     Promise.all
       (selectedIds.map(no => 
-      fetch(`http://localhost:9070/cart/${no}`, { method: 'DELETE' })
+      fetch(`https://port-0-regobackend-mbhas4h3dc26f757.sel4.cloudtype.app/cart/${no}`, { method: 'DELETE' })
     )).then(() => {
       const updated = cartItems.filter((_, idx) => !checkedItems[idx]);
       setCartItems(updated);
