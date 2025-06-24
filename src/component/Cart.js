@@ -138,7 +138,7 @@ useEffect(() => {
                     onChange={() => handleItemCheck(idx)}
                   />
                   <div className='cart-item-img'>
-                    <img src={(item.img ? item.img.replace(/\.jpg$/i, '.jpg') : item.image)} alt={item.title || item.name} fetchpriority="high"/>
+                    <img src={(item.img ? item.img.replace(/\.png$/i, '.jpg') : item.image)} alt={item.title || item.name} fetchpriority="high"/>
                   </div>
                   <div className='cart-item-info'>
                     <label htmlFor={`item${idx}`} className='cart-item-title'>{item.title || item.name}</label>
